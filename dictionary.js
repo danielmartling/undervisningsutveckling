@@ -226,4 +226,6 @@ const templates = [
     () => `${randomize(effekter, capitalize = true)} genom ${randomize(metoder)}.`,
 
     () => `${randomize(substantiv, capitalize = true)}baserat lärande.`,
+
+    () => `${randomize([...metoder, ...substantiv], capitalize = true)} för ${randomize([...effekter, ...substantiv])}.`
 ]
