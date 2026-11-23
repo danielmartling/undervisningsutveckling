@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Undervisningsutveckling</title>
 
+    <script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -21,11 +23,10 @@
         </button>
 
         <button onclick="document.getElementById('result').value = ''">
-            Rensa
+            <span class="iconify" data-icon="mdi-backspace-outline"></span>
         </button>
 
-        <button onclick="clipboard()">
-            Kopiera
+        <button onclick="clipboard()"><span class="iconify" data-icon="mdi-content-copy"></span>
         </button>
 
         <br><br>
@@ -34,8 +35,8 @@
             placeholder="Tryck på knappen för att skapa framtidens pedagogiska utmaningar!"></textarea>
     </div>
 
-    <script src="./dictionary.js"></script>
-    <script src="./generate.js"></script>
+    <script src="./js/dictionary.js"></script>
+    <script src="./js/generate.js"></script>
 </body>
 
 </html>
