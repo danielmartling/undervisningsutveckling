@@ -75,6 +75,9 @@ const substantiv = [
     "människa-AI-interaktion",
     "lönesamtal",
     "kaffepaus",
+    "arvoderad konsult",
+    "influencer",
+    "föreläsare"
 ];
 const adjektiv = [
     "evidensbaserad",
