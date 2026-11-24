@@ -126,7 +126,8 @@ const adjektiv = [
     "kvalitativ",
     "kvantitativ",
     "innovativ",
-    "reflekterande"
+    "reflekterande",
+    "responsiv"
 ];
 const verb = [
     "främja",
@@ -234,5 +235,7 @@ const templates = [
 
     () => `${randomize([...metoder, ...substantiv], capitalize = true)} för lärande.`,
 
-    () => `${randomize(verb, capitalize = true)} lärandet.`
+    () => `${randomize(verb, capitalize = true)} lärandet.`,
+
+    () => `${randomize(adjektiv, capitalize = true)} undervisning.`
 ]
