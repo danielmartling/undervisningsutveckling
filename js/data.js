@@ -1,5 +1,5 @@
 export async function getData() {
-    const response = await fetch("../data/dictionary.json");
+    const response = await fetch("./data/dictionary.json");
 
     if (!response.ok) {
         throw new Error("Could not load JSON data");
@@ -10,7 +10,7 @@ export async function getData() {
 }
 
 export async function getTemplates() {
-    const response = await fetch("../data/templates.json");
+    const response = await fetch("./data/templates.json");
 
     if (!response.ok) {
         throw new Error("Could not load JSON data");
