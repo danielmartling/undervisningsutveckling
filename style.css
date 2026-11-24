@@ -10,19 +10,13 @@ button {
 
 textarea {
     width: 100%;
-    height: 150px;
     box-sizing: border-box;
     padding: 20px;
     font-size: 20px;
     line-height: 1.5;
     border: 2px solid #aaaaaa;
     border-radius: 10px;
-    resize: vertical;
+    resize: none;
     margin: 20px 0;
-}
-
-@media screen and (max-width: 1024px) {
-    textarea {
-        height: 300px;
-    }
+    field-sizing: content;
 }

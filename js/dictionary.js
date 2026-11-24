@@ -126,14 +126,14 @@ const adjektiv = [
     "kvalitativ",
     "kvantitativ",
     "innovativ",
-    "reflekterande"    
+    "reflekterande"
 ];
 const verb = [
     "främja",
     "stärka",
     "utveckla",
     "synliggöra",
-    "optimera", 
+    "optimera",
     "implementera",
     "integrera",
     "differentiera",
@@ -230,5 +230,9 @@ const templates = [
 
     () => `${randomize(substantiv, capitalize = true)}baserat lärande.`,
 
-    () => `${randomize([...metoder, ...substantiv], capitalize = true)} för ${randomize([...effekter, ...substantiv])}.`
+    () => `${randomize([...metoder, ...substantiv], capitalize = true)} för ${randomize([...effekter, ...substantiv])}.`,
+
+    () => `${randomize([...metoder, ...substantiv], capitalize = true)} för lärande.`,
+
+    () => `${randomize(verb, capitalize = true)} lärandet.`
 ]
