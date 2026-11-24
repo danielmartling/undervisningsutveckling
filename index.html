@@ -17,25 +17,26 @@
         <h1>
             Undervisningsutveckling
         </h1>
-
-        <button onclick="generate()">
+        
+        <button id="generateButton">
             Knappen
         </button>
 
-        <button onclick="document.getElementById('result').value = ''">
+        <button id="clearButton">
             <span class="iconify" data-icon="mdi-backspace-outline"></span>
         </button>
 
-        <button onclick="clipboard()"><span class="iconify" data-icon="mdi-content-copy"></span>
+        <button id="copyButton">
+            <span class="iconify" data-icon="mdi-content-copy"></span>
         </button>
 
-        <textarea id="result" readonly
+        <textarea id="output" readonly
             placeholder="Tryck på knappen för att skapa framtidens pedagogiska utmaningar!"></textarea>
 
     </div>
 
-    <script src="./js/dictionary.js"></script>
-    <script src="./js/generate.js"></script>
+    <script type="module" src="./js/main.js"></script>
+
 </body>
 
 </html>
