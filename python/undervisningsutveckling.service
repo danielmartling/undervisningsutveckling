@@ -3,6 +3,6 @@ Description=Stupid bot that posts to Bluesky
 
 [Service]
 Type=oneshot
-WorkingDirectory=/opt/undervisningsutveckling
-EnviromentFile=/opt/undervisningsutveckling/.env
-ExecStart=/opt/undervisningsutveckling/.venv/bin/python /opt/undervisningsutveckling/main.python
+WorkingDirectory=/opt/undervisningsutveckling/python
+EnviromentFile=/opt/undervisningsutveckling/python/.env
+ExecStart=/opt/undervisningsutveckling/python/.venv/bin/python /opt/undervisningsutveckling/python/main.py

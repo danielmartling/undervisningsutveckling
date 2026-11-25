@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 
 import json
 import random
+import re
 
 from atproto import Client
 
@@ -20,9 +21,7 @@ def generate():
     # Select random template
     template = random.choice(templates)
 
-    # Replace placeholders
-    import re
-
+    # Populate sentence with random words
     sentence = re.sub(
         r"\{(\w+)\}",
         lambda match: random.choice(data[match.group(1)]),
@@ -39,9 +38,7 @@ def main():
         os.environ["BLUESKY_HANDLE"],
         os.environ["BLUESKY_APP_PASSWORD"]
     )
-
     message = generate()
-
     client.send_post(generate())
 
 if __name__ == "__main__":

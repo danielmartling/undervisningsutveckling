@@ -1,8 +1,8 @@
 [Unit]
-Description=Run the bot every day
+Description=Run the bot every hour
 
 [Timer]
-OnCalendar=*-*-* 08:00:00 Europe/Stockholm
+OnCalendar=*-*-* *:00:00 Europe/Stockholm
 Persistent=true
 
 [Install]
