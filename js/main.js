@@ -4,18 +4,18 @@ import { randomize, setUpClearButton, setUpCopyButton } from "./generate.js";
 const generateButton = document.getElementById("generateButton");
 const output = document.getElementById("output");
 
-const historyDiv = document.getElementById("history");
+const previousDiv = document.getElementById("previous");
 
 let data;
 let templates;
 let dataLoaded = false;
 
-let history = [];
+let previous = [];
 
 async function init() {
     try {
         output.value = "";
-        
+
         data = await getData();
         templates = await getTemplates();
         dataLoaded = true;
@@ -58,29 +58,30 @@ function setUpGenerateButton() {
 }
 
 function enqueue(str) {
-    if (history.length >= 11) {
-        history.shift();
+    if (previous.length >= 11) {
+        previous.shift();
     }
-    history.push(str);
-    renderHistory();
+    previous.push(str);
+    renderPrevious();
+    console.log(previous)
 }
 
-function renderHistory() {
-    let historyHTML = "";
+function renderPrevious() {
+    let previousHTML = "";
 
-    if (history.length > 0) {
-        history
-            .slice(0, history.length - 1)
+    if (previous.length > 0) {
+        previous
+            .slice(0, previous.length - 1)
             .reverse()
             .forEach((sentence) => {
-                historyHTML += `
+                previousHTML += `
                     <li class="sentence">${sentence}</li>
                 `;
             })
     }
 
-    if (history.length > 1) {
-        historyDiv.innerHTML = historyHTML;
+    if (previous.length > 1) {
+        previousDiv.innerHTML = previousHTML;
     }
 }
 
