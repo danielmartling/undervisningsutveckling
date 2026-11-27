@@ -23,4 +23,23 @@ textarea {
     resize: none;
     margin: 20px 0;
     field-sizing: content;
+    min-height: 100px;
+    align-content: center;
+}
+
+#history {
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 2px solid #aaaaaa;
+    padding: 20px;
+    color: #aaaaaa;
+}
+
+li.sentence {
+    padding: 5px;
+    margin-left: 5px;
+}
+
+#app {
+    padding: 20px;
 }
